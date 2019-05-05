@@ -12,10 +12,10 @@ public:
     void reduction(Mytime &);
     friend ostream &operator<<(ostream &os,const Mytime &t)
     {
-        if(t.hour<1&&t.mins<1)
+        if(t.hour<=1&&t.mins<=1)
         os<<t.hour<<"_"<<"hour"<<"_"<<t.mins<<"_"<<"minute";
 
-        else if (t.hour>=1&&t.mins>=1)
+        else if (t.hour>1&&t.mins>1)
         {
             os<<t.hour<<"_"<<"hours"<<"_"<<t.mins<<"_"<<"minutes";
         }
@@ -23,7 +23,7 @@ public:
         {
             os<<t.hour<<"_"<<"hours"<<"_"<<t.mins<<"_"<<"minute";
         }
-        else if(t.hour<=1 && t.mins>=1)
+        else if(t.hour<=1 && t.mins>1)
         {
            os<<t.hour<<"_"<<"hour"<<"_"<<t.mins<<"_"<<"minutes";
         }
